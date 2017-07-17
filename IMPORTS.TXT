@@ -1,0 +1,30 @@
+import sound.algo.si
+    sound.algo.si
+ 
+from sound.algo import si
+
+from sound.algo import si as rev 
+
+
+IMPORT
+
+
+
+Python esta divididos en modulos, si vemos una jerarquia de archivos, aquellas carpetas que cuenten con init serán considerados como modulos. 
+
+Python ofrece una solución cuanto estos modulos estan muy segmentados, gracias a palabras reservadas como import. Veamos un ejemplo de como importar la misma libreria usando diferente nomenclaturas:
+
+a) Si quieres usar echofilte solo usando import, tienes que especificar todo el modulo: 
+
+import sound.effects.echo 
+sound.effects.echo.echofilter(...)
+
+b) Pero si usamos from, podemos limitar la petición a partir de echo: 
+
+from sound.effects import echo
+echo.echofilter(...)
+
+c) O crear un valor "temporal" y de ahí hacer la petición de ese modulo:
+
+from sound.effects import echo as rev
+rev.echofilter(...)
