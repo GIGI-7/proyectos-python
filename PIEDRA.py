@@ -28,7 +28,7 @@ def perdiste(jugador , pc ):
         print ("Perdiste, Lagarto devora Papel")
     elif pc == "Papel" and jugador == "Spock":
         sleep (1)
-        print ("Perdiste, Papel deautoriza Spock")
+        print ("Perdiste, Papel desautoriza Spock")
     elif pc == "Spock" and jugador == "Piedra":
         sleep (1)
         print ("Perdiste, Spock vaporiza Piedra")
@@ -67,7 +67,7 @@ def play (jugador) :
         print ("Ganaste, Lagarto devora Papel")
     elif jugador == "Papel" and pc == "Spock":
         sleep (1)
-        print ("Ganaste, Papel deautoriza Spock")
+        print ("Ganaste, Papel desautoriza Spock")
     elif jugador == "Spock" and pc == "Piedra":
         sleep (1)
         print ("Ganaste, Spock vaporiza Piedra")
@@ -89,7 +89,7 @@ def run():
             [J]ugar
             [S]alir
         '''))
-
+        command = command.upper()
         if command == 'R': 
             print ('''
                   Tijeras cortan Papel
@@ -106,7 +106,8 @@ def run():
             
         elif command == 'J':
             lista2 = ["Piedra" ,"Papel" ,"Tijera" ,"Lagarto" ,"Spock" ]
-            jugador = str(raw_input('Qué opción elijes[Piedra Papel Tijera Lagarto Spock]: '))
+            jugador = str(raw_input('¿Qué opción elijes? Piedra Papel Tijera Lagarto Spock: '))
+            jugador = jugador.capitalize()
             if jugador  not in lista2:        
                 print "No hagas trampa!"
             else:        
